@@ -12,6 +12,7 @@ export default async function handler(req, res) {
     const response = await axios({
       url: decodeURIComponent(url),
       responseType: 'arraybuffer',
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...' }
     });
 
     // 2. Use Sharp to resize and convert to WebP (faster/smaller than PNG)
